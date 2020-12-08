@@ -19,7 +19,7 @@ public class Solution {
                 String hrs = s.substring(0,2);
                 int hr = Integer.parseInt(hrs);
                 if(hr == 12){
-                    ans = "00" + s.substring(2, s.length() - 2);
+                    ans = "12" + s.substring(2, s.length() - 2);
                 }
                 else{
                     hr = 12 + hr;
@@ -27,7 +27,14 @@ public class Solution {
                 }
             }
             else{
-                ans = s.substring(0, s.length() - 2);
+                String hrs = s.substring(0,2);
+                int hr = Integer.parseInt(hrs);
+                if(hr == 12){
+                    ans = "00" + s.substring(2, s.length() - 2);
+                }
+                else{
+                    ans = s.substring(0, s.length() - 2);   
+                }
             }
         return ans;
     }
